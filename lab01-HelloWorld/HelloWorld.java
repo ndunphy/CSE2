@@ -1,5 +1,7 @@
 //Nicolette Dunphy
+//Lab 01
 //Hello World Java Program
+
 //
 // define a class
 public class HelloWorld{
