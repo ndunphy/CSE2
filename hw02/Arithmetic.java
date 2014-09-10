@@ -37,7 +37,7 @@ public class Arithmetic{
         //Calculate total cost of glasses
         double totalGlassCost$= nGlasses*glassCost$;
         //Calculate sales tax on glasses
-        double totalGlassTax$=totalSockCost$*taxPercent;
+        double totalGlassTax$=totalGlassCost$*taxPercent;
         
         //Calculate total cost of envelopes
         double totalEnvelopeCost$=nEnvelopes*envelopeCost$;
@@ -50,51 +50,50 @@ public class Arithmetic{
         double totalTax$=subtotal$*taxPercent;
        
        //Converting double to int for total tax
-       // int totalTax1$= (int)totalTax$;
-        //int totalTax2$= ((totalTax1$*100)/100);
+        int totalTax1$= (int)(totalTax$*100);
+        double totalTax2$= totalTax1$/100.0;
         
         //Calculate total cost
-        double totalCost$=subtotal$+totalTax$;
+        double totalCost$=subtotal$+totalTax2$;
         
-        //Converting doubles to integers for answers
-        //int totalSockTax1$= (int)totalSockTax$;
-        //int totalSockTax2$= ((totalSockTax1$*100)/100);
-       
+        //Converting doubles to integers for answers with two decimal points
+        int totalSockTax1$= (int)(totalSockTax$*100);
+        double totalSockTax2$= totalSockTax1$/100.0;
         
-        //int totalGlassTax1$= (int)totalGlassTax$;
-        //int totalGlassTax2$= ((totalSockTax1$*100)/100);
         
-        //int totalEnvelopeTax1$= (int)totalEnvelopeTax$*100/100;
-        //int totalEnvelopeTax2$= ((totalEnvelopeTax1$*100/100));
+        int totalGlassTax1$= (int)(totalGlassTax$*100);
+        double totalGlassTax2$= totalGlassTax1$/100.0;
         
-        //converting the numbers was messing up the final output so I commented that part out
+        int totalEnvelopeTax1$= (int)(totalEnvelopeTax$*100);
+        double totalEnvelopeTax2$= totalEnvelopeTax1$/100.0;
+        
+        
        
         
         System.out.println("Socks");
         System.out.println(nSocks);
         System.out.println(sockCost$+" "+"per sock");
         System.out.println("Subtotal"+"="+"$"+totalSockCost$);
-        System.out.println("Total tax"+"="+"$"+totalSockTax$);
+        System.out.println("Total tax"+"="+"$"+totalSockTax2$);
         System.out.println("");
     
         System.out.println("Glasses");
         System.out.println(nGlasses);
         System.out.println(glassCost$+" "+"per glass");
         System.out.println("Subtotal"+"="+"$"+totalGlassCost$);
-        System.out.println("Total tax"+"="+"$"+totalGlassTax$);
+        System.out.println("Total tax"+"="+"$"+totalGlassTax2$);
         
         System.out.println("");
         System.out.println("Envelopes");
         System.out.println(nEnvelopes);
         System.out.println(envelopeCost$+" "+"per envelope");
         System.out.println("Subtotal"+"="+"$"+totalEnvelopeCost$);
-        System.out.println("Total tax"+"="+"$"+totalEnvelopeTax$);
+        System.out.println("Total tax"+"="+"$"+totalEnvelopeTax2$);
         
         System.out.println("");
         System.out.println("Total of all products"+"=$"+subtotal$);
-        System.out.println("Total tax of all products"+"=$"+totalTax$);
+        System.out.println("Total tax of all products"+"=$"+totalTax2$);
         System.out.println("Grand total"+"=$"+totalCost$);
-        
-        
+       
     }
 }
