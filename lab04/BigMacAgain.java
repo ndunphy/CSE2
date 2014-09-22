@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 //add class and main method
 
-public class BigMacAgain {
+public class BigMacAgain{
     //main method
     public static void main(String [] args) {
         
@@ -34,7 +34,7 @@ public class BigMacAgain {
         
    
         //boolean statement
-        double totalBigMacCost =0;
+        double totalBigMacCost =0;  
         if (myScanner.hasNextInt()) {
             nBigMacs= myScanner.nextInt();
             totalBigMacCost= (int)((nBigMacs*costBigMac)*100)/100.0;
