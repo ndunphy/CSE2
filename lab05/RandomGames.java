@@ -25,6 +25,10 @@ public class RandomGames{
         //declare variables
         String userInput;
         userInput= myScanner.next();
+        
+        if(userInput.length()>1){
+            System.out.println("Single character expected");
+        }
         int roulette= ((int)(Math.random()*37)+1);
         int suit=((int)(Math.random()*(4))+1);
         int card=((int)(Math.random()*(14-2))+2);
