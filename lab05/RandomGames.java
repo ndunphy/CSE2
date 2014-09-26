@@ -27,9 +27,10 @@ public class RandomGames{
         userInput= myScanner.next();
         
         if(userInput.length()>1){
-            System.out.println("Single character expected");
+            System.out.println("Single character expected"); //checking for one character length
         }
-        int roulette= ((int)(Math.random()*37)+1);
+        else{ //if only one character, runs rest of program
+        int roulette= ((int)(Math.random()*37)+1); //sets ranges
         int suit=((int)(Math.random()*(4))+1);
         int card=((int)(Math.random()*(14-2))+2);
         int dice= ((int)(Math.random()*6)+1);
@@ -137,6 +138,7 @@ public class RandomGames{
                     break;
                  }
         }
+    }
 
     }
 
