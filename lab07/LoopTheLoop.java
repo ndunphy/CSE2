@@ -16,8 +16,11 @@ public class LoopTheLoop{ //class
     public static void main(String[] arg){ //method
         Scanner myLoop; //scanner
         myLoop= new Scanner (System.in);
-        System.out.print("Enter an int between 1 and 15: "); //prompts user for int
-     
+        
+    boolean boolean1= true;
+    
+    while(boolean1){
+    System.out.print("Enter an int between 1 and 15: "); //prompts user for int
      if(myLoop.hasNextInt()){ //checks if integer
      
         int input= myLoop.nextInt(); //sets input equal to what user types in
@@ -45,12 +48,36 @@ public class LoopTheLoop{ //class
             result += "*"; //adds one more * after each loop
         }
         }
-        else{ System.out.println("Not in range [1,15]");} //prints if not in range
+        else{ System.out.println("Not in range [1,15]");
+            String junk= myLoop.next();
+            continue; //goes to top of loop
+        } //prints if not in range
+            
+         
      }
-        else{ System.out.println("Not an integer");} //prints if not an integer
+        else{ 
+            System.out.println("Not an integer");
+            String junk= myLoop.next();
+            continue; //top of loop
+        } //prints if not an integer
         
+       
+        System.out.print("Do you want to run the program again? (Y,y,n,or N): ");
+        String answer= myLoop.next();
+        if(answer.equals("Y")||answer.equals("y")){
+            boolean1=true;
+        }
+        else if(answer.equals("N")||answer.equals("n")){
+            boolean1=false;
+        }
+        else{
+            System.out.println("You did not print Y,y,N,or n");
+        }
+        }
         
     }
-}
+
+    }
+
 
 

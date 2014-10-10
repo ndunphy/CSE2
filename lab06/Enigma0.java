@@ -16,6 +16,7 @@ public class Enigma0{
   public static void main(String arg []){
     System.out.print("Enter an int- ");
     Scanner scan=new Scanner(System.in);
+   
     if(scan.hasNextInt()){
       int n=scan.nextInt();
       System.out.println("You entered "+n);
@@ -26,11 +27,13 @@ public class Enigma0{
     }
     
     int k=4,p=6,q=7,r=8,n;
+    n=scan.nextInt();
     switch(k+p+q+r){
       case 24: 
       case 25: System.out.println("sum is 25");
       default:
-        System.out.println("To repeat, you entered "+n);
+        
+        System.out.println("Again, you entered "+n);
     }
   }
 }
