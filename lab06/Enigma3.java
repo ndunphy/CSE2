@@ -14,6 +14,7 @@ public class Enigma3{
     int n=40,k=60;
     String out="";
     switch(k%14){
+    
       case 12: 
       case 13: out+=13;
          break;
@@ -21,19 +22,26 @@ public class Enigma3{
           n/=3;
           k-=7;
     }
+     
     if(n*k%12< 12){
+     
       n-=20;
+     
       out+=n;
     }
+   
     if(n*n>k){
       n=42;
       out+=n+k;
     }
+     
     else {
       n=45;
       out+=n+k;
     }
+     
     switch(n+k){
+    
       case 114: 
         n-=11;
         k-=3;
@@ -49,14 +57,17 @@ public class Enigma3{
         n-=3;
         k-=5;
     }
-     out+=1/n + 1/k;   
+   
+   
+    
+     out+=1/n + k;   
     System.out.println(out);
   }
 }
 
 /*
  * Error report:
- * 
+ * k becomes zero after it becomes 5 in line 57 and then in line 60 so if you change the last out statement it will simply have it be 0 instead of 1/0 which does not exist
  * 
  * 
  * 

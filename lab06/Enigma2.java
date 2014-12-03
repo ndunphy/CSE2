@@ -10,7 +10,7 @@ public class Enigma2{
     switch(n){
       case 12: 
       case 13: out+=13;
-      case 40: out+=40/0;
+      case 40: out+=40;
     }
     System.out.println(out);
   }
@@ -20,8 +20,8 @@ public class Enigma2{
  * Error Report: Explain how you can use the java.lang exception to
  *     identify the runtime error in the above code
  * 
- * 
- * 
+ * The runtime error says that there is an Artihmetic Expection (dividing by zero)
+ * delete /0 from line 13 and it runs properly
  * 
  * 
  */
