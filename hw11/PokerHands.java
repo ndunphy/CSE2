@@ -33,20 +33,30 @@ import java.util.Scanner;
 public class PokerHands{
 
     public static void main(String [] args){
-        System.out.print("Enter 'y' or 'Y' to enter a(nother hand- ");
+        System.out.print("Enter 'y' or 'Y' to enter a(nother hand- "); //prompts for continuing/running the program
         
-        System.out.print("Enter the suit: 'c', 'd', 'h', or 's'- ");
+        System.out.print("Enter the suit: 'c', 'd', 'h', or 's'- "); //prompts user to enter suit
         
-        System.out.print("Enter one of 'a','k','q','j','10',....'2'- ");
+        System.out.print("Enter one of 'a','k','q','j','10',....'2'- "); //enter rank
     
+        int [] cardNumbers= new int [52];
+        int j=0;
+        for (int i=0; i<cardNumbers.length; i++){
+           cardNumbers[i]=j; //assigns values to the array
+           j++;
+        }
+       int suit=j/13; //calculates suit
+       int face=j%13; //calculates rank
+       
+       int [] freqRanks= new int [13]; //counts frequency of the ranks
+       int [] freqCounter= new int [5]; //counts frequency of 0s,1s,2s,3s, and 4s
         
     }
 
 
 
-
 public static void showOneHand(int hand[]){
-	String suit[]={"Clubs:	", "Diamonds: ", "Hearts:   ", "Spades:     "};              "Spades:   "};
+	String suit[]={"Clubs:	", "Diamonds: ", "Hearts:   ", "Spades:     "};
 	String face[]={
        "A ","K ","Q ","J ","10 ","9 ","8 ","7 ","6 ","5 ",
   	"4 ","3 ","2 "};
